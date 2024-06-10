@@ -1,4 +1,99 @@
-h1 {
-  width: 529px;
-  height: 228px;
+@font-face {
+  font-display: swap;
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/play-v19-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Play";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/play-v19-latin-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-v30-cyrillic_latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/roboto-v30-cyrillic_latin-700.woff2") format("woff2");
+}
+
+:root {
+  --color-primary-light: #ffffff;
+  --color-primary-brand: #2b7fff;
+  --color-primary-dark: #011c44;
+  --color-secondary-light: #747272;
+  --color-secondary-dark: #4a4a4a;
+  --color-secondary-brand: #011f4a;
+  --color-secondary-gold: #ffd02b;
+}
+
+/* BASE */
+body {
+  color: var(--color-primary-dark);
+  font-family: "play", sans-serif;
+  line-height: 1.2;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+ul {
+  list-style: none;
+}
+
+/* Button */
+.button-primary {
+  color: var(--color-primary-light);
+  border-radius: 32px;
+  background-color: var(--color-primary-brand);
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.button-primary:hover {
+  color: var(--color-primary-dark);
+  background-color: transparent;
+  box-sizing: border-box;
+  border: 2px solid var(--color-primary-brand);
+}
+
+/* Link */
+.link {
+  color: var(--color-primary-dark);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.link:hover {
+  color: var(--color-primary-brand);
+  font-weight: 700;
+}
+
+/* Hero section */
+.hero-title {
+  color: var(--color-primary-brand);
+  font-weight: 700;
+  font-size: 64px;
+}
+
+.section-title .accent {
+  color: var(--color-primary-brand);
+}
+
+p .accent {
+  font-weight: 600;
 }
