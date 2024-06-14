@@ -43,20 +43,29 @@
 /* BASE */
 body {
   color: var(--color-primary-dark);
-  font-family: "play", sans-serif;
-  line-height: 1.2;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.7;
 }
 
-p {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
+address {
+  font-style: normal;
 }
 ul {
   list-style: none;
 }
 
+p .accent {
+  font-weight: 600;
+}
+
 /* Button */
 .button-primary {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
   color: var(--color-primary-light);
   border-radius: 32px;
   background-color: var(--color-primary-brand);
@@ -72,13 +81,21 @@ ul {
 }
 
 /* Link */
-.link {
+.header-link {
+  text-decoration: none;
   color: var(--color-primary-dark);
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+}
+.footer-link {
+  text-decoration: none;
+  color: var(--color-primary-light);
+  font-size: 16px;
+  line-height: 1.2;
 }
 
-.link:hover {
+.header-link:hover,
+.footer-link:hover {
   color: var(--color-primary-brand);
   font-weight: 700;
 }
@@ -86,14 +103,88 @@ ul {
 /* Hero section */
 .hero-title {
   color: var(--color-primary-brand);
+  font-family: "Play", sans-serif;
   font-weight: 700;
-  font-size: 64px;
+  font-size: 140px;
+  line-height: 0.8;
+  text-align: left;
+  text-transform: capitalize;
 }
 
+.hero-section .hero-text {
+  text-align: left;
+  line-height: 1.2;
+}
+.hero-section .button-text {
+  font-size: 12px;
+  text-align: left;
+}
+
+/* Section title */
+
+.section-title {
+  font-weight: 700;
+  font-size: 64px;
+  text-align: center;
+  line-height: 1.15;
+}
 .section-title .accent {
   color: var(--color-primary-brand);
 }
 
-p .accent {
+.section-title .capitalize {
+  text-transform: capitalize;
+}
+/* Information section */
+
+.information-text {
+  font-size: 22px;
+  line-height: 1.7;
+}
+
+.information-text .brand {
   font-weight: 600;
+  text-transform: capitalize;
+}
+
+/* Advantages section */
+
+.advantages-item {
+  line-height: 1.3;
+  text-align: center;
+}
+
+/* Procedures section */
+
+.procedures-title {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.2;
+}
+/* Footer */
+footer {
+  background-color: #011f4a;
+} /*для удобства*/
+
+.footer-address {
+  color: var(--color-primary-light);
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.footer-address:hover {
+  color: var(--color-primary-brand);
+}
+
+.address-link {
+  color: var(--color-primary-light);
+  text-decoration: none;
+}
+.address-link:hover {
+  color: var(--color-primary-brand);
+}
+
+.address-copyright {
+  color: var(--color-secondary-light);
+  font-size: 13px;
 }
