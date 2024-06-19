@@ -41,43 +41,47 @@
 }
 
 /* BASE */
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: var(--color-primary-dark);
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.7;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
 }
 
 address {
   font-style: normal;
 }
 ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
-p .accent {
-  font-weight: 600;
+.section {
+  padding: 48px 0;
 }
 
-/* Button */
-.button-primary {
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 1.2;
-  color: var(--color-primary-light);
-  border-radius: 32px;
-  background-color: var(--color-primary-brand);
-  border-color: transparent;
-  cursor: pointer;
-}
-
-.button-primary:hover {
-  color: var(--color-primary-dark);
-  background-color: transparent;
-  box-sizing: border-box;
-  border: 2px solid var(--color-primary-brand);
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 /* Link */
@@ -97,32 +101,109 @@ p .accent {
 .header-link:hover,
 .footer-link:hover {
   color: var(--color-primary-brand);
-  font-weight: 700;
+}
+
+/* Header */
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 40px;
+}
+
+.header-menu {
+  display: flex;
+  gap: 56px;
+  flex-grow: 1;
+  justify-content: center;
 }
 
 /* Hero section */
+.hero-section {
+  padding: 123px 0;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  max-width: 529px;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .hero-title {
+  margin: 0;
   color: var(--color-primary-brand);
   font-family: "Play", sans-serif;
   font-weight: 700;
   font-size: 140px;
   line-height: 0.8;
-  text-align: left;
   text-transform: capitalize;
 }
 
-.hero-section .hero-text {
-  text-align: left;
+.hero-text {
+  margin: 0;
+  /* text-align: left; */
   line-height: 1.2;
 }
-.hero-section .button-text {
+
+/* Button-primary */
+.button-primary {
+  padding: 16px 32px;
+  /*margin: 0 14px 19px 0; */
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--color-primary-light);
+  border-radius: 32px;
+  background-color: var(--color-primary-brand);
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.button-first {
+  display: flex;
+  flex-direction: column;
+  width: 238px;
+  height: 103px;
+  gap: 14px;
+}
+
+.button-primary:hover {
+  color: var(--color-primary-dark);
+  background-color: transparent;
+  box-sizing: border-box;
+  border: 2px solid var(--color-primary-brand);
+}
+
+.button-text {
+  margin-bottom: 0;
+  width: 100%;
+  max-width: 238px;
+  height: 100%;
+  max-height: 36px;
   font-size: 12px;
-  text-align: left;
+  text-align: center;
 }
 
 /* Section title */
 
 .section-title {
+  margin-bottom: 48px;
   font-weight: 700;
   font-size: 64px;
   text-align: center;
@@ -136,8 +217,35 @@ p .accent {
   text-transform: capitalize;
 }
 /* Information section */
+.information-section {
+  padding-top: 40px;
+  padding-bottom: 88px;
+}
+
+.information-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.information-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.information-title {
+  margin-bottom: 0;
+  max-width: 529px;
+  max-height: 188px;
+  text-align: left;
+}
 
 .information-text {
+  margin-bottom: 0;
+  width: 100%;
+  max-width: 709px;
+  text-align: left;
   font-size: 22px;
   line-height: 1.7;
 }
@@ -148,21 +256,61 @@ p .accent {
 }
 
 /* Advantages section */
+.advantages-section {
+  padding-top: 88px;
+}
 
-.advantages-item {
+.advantages-title {
+  max-width: 432px;
+  margin-bottom: 0;
+}
+.advantages-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.advantages-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 56px;
+}
+
+.advantages-items {
+  padding: 24px 32px;
+  border-radius: 32px;
+  box-shadow: 0px 4px 4px 0px rgba(168, 198, 245, 0.38);
+  background: var(--color-primary-light);
   line-height: 1.3;
   text-align: center;
 }
 
 /* Procedures section */
 
-.procedures-title {
+.procedures-card {
+  max-width: 344px;
+  max-height: 456px;
+  margin-bottom: 0;
   font-weight: 400;
   font-size: 22px;
   line-height: 1.2;
 }
+
+.procedures-container {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.procedures-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
 /* Footer */
-footer {
+.footer {
+  padding-top: 48px;
   background-color: #011f4a;
 } /*для удобства*/
 
