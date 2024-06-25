@@ -126,6 +126,15 @@ ul {
   justify-content: center;
 }
 
+.header-icon {
+  display: flex;
+  gap: 32px;
+}
+
+.header-address .address-social {
+  fill: var(--color-primary-dark);
+}
+
 /* Hero section */
 .hero-section {
   padding: 123px 0;
@@ -304,6 +313,22 @@ ul {
 }
 
 .advantages-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+/* .advantages-items.education-advantage::before {
+  display: block;
+  width: 48px;
+  height: 48px;
+  background-image: url("../images/game-icons_materials-science.svg");
+  content: "";
+}  Еще один вариант добавления иконок внутри списка ul */
+
+.advantages-items {
   height: 181px;
   padding: 24px 32px;
   border-radius: 32px;
@@ -311,6 +336,10 @@ ul {
   background: var(--color-primary-light);
   line-height: 1.3;
   text-align: center;
+}
+
+.advantages-icon {
+  fill: var(--color-primary-brand);
 }
 
 /* Procedures section */
@@ -383,10 +412,6 @@ ul {
   gap: 16px;
 }
 
-.footer-icon {
-  display: flex;
-}
-
 .footer-address {
   display: flex;
   justify-content: space-between;
@@ -402,11 +427,24 @@ ul {
   color: var(--color-primary-brand);
 }
 
+.address-icon {
+  display: flex;
+  justify-content: space-between;
+}
+
 .address-container {
   flex-basis: 192px;
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.address-social {
+  fill: var(--color-primary-light);
+}
+
+.address-social:hover {
+  fill: var(--color-primary-brand);
 }
 
 .address-list {
